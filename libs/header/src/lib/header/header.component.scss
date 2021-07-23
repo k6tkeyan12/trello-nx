@@ -37,16 +37,16 @@ main {
   margin-bottom: 20px;
 }
 
-// .new-list form input {
-//   font-size: 20px;
-//   padding: 10px;
-//   border-radius: 3px;
-//   border: none;
-// }
+.new-list form input {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 3px;
+  border: none;
+}
 
-// .new-list form input:focus {
-//   outline: none;
-// }
+.new-list form input:focus {
+  outline: none;
+}
 
 .all-lists {
   display: flex;
@@ -84,7 +84,7 @@ ul h2 {
   align-self: center;
 }
 
-.item,mat-card {
+.item {
   display: flex;
   justify-content: space-between;
   padding: 5px;

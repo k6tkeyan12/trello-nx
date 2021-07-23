@@ -21,7 +21,10 @@
               "apps/app-name/src/favicon.ico",
               "apps/app-name/src/assets"
             ],
-            "styles": ["apps/app-name/src/styles.scss"],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "apps/app-name/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -119,10 +122,85 @@
           }
         }
       }
+    },
+    "card": {
+      "projectType": "library",
+      "root": "libs/card",
+      "sourceRoot": "libs/card/src",
+      "prefix": "my-nx-app",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/card"],
+          "options": {
+            "jestConfig": "libs/card/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/card/src/**/*.ts",
+              "libs/card/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "header": {
+      "projectType": "library",
+      "root": "libs/header",
+      "sourceRoot": "libs/header/src",
+      "prefix": "my-nx-app",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/header"],
+          "options": {
+            "jestConfig": "libs/header/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/header/src/**/*.ts",
+              "libs/header/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "list": {
+      "projectType": "library",
+      "root": "libs/list",
+      "sourceRoot": "libs/list/src",
+      "prefix": "my-nx-app",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/list"],
+          "options": {
+            "jestConfig": "libs/list/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/list/src/**/*.ts",
+              "libs/list/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@ngrx/schematics"
   },
   "schematics": {
     "@nrwl/angular": {

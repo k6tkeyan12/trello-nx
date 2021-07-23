@@ -33,6 +33,15 @@
     "app-name-e2e": {
       "tags": [],
       "implicitDependencies": ["app-name"]
+    },
+    "card": {
+      "tags": []
+    },
+    "header": {
+      "tags": []
+    },
+    "list": {
+      "tags": []
     }
   }
 }

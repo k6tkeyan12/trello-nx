@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@my-nx-app/card": ["libs/card/src/index.ts"],
+      "@my-nx-app/header": ["libs/header/src/index.ts"],
+      "@my-nx-app/list": ["libs/list/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
